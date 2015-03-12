@@ -1,0 +1,13 @@
+Palette URL: http://paletton.com/#uid=71a0q0knEYM00++7YZFUuWCO64j  
+
+  <ThemeElement name="TileTitleSeparatorColor" type="color" rgbHex="#5C05F4" description="Separator Background"/>
+  <ThemeElement name="TileDialogTitleBkgColor" type="color" rgbHex="#FFCF43" description="Title Background"/>
+  <ThemeElement name="TileDialogTitleForeColor" type="color" rgbHex="#221E00" description="Title Foreground"/>
+  <ThemeElement name="TileDialogStaticAreaBkgColor" type="color" rgbHex="#FFEFC0" description="Static area Background"/>
+  <ThemeElement name="BkgColor" type="color" rgbHex="#FFF8C0" description="Control area Background"/>
+  <ThemeElement name="DocumentBkgColor" type="color" rgbHex="#FFF8C0" description="Control area Background"/>
+  <ThemeElement name="HeaderTileDialogBkgColor" type="color" rgbHex="#FFBE00" description="Header Background"/>
+  <ThemeElement name="FooterTileDialogBkgColor" type="color" rgbHex="#FFCF43" description="Footer Background"/>
+  <ThemeElement name="TileGroupBkgColor" type="color" rgbHex="#FFFFFF" description="Tile Group Background"/>
+  <ThemeElement name="BERowSelectedBkgColor" type="color" rgbHex="#D8C3FC" description="Selected row Background"/>
+  <ThemeElement name="BERowSelectedForeColor" type="color" rgbHex="#000000" description="Selected row Foreground"/>

@@ -1,0 +1,11 @@
+  <ThemeElement name="TileTitleSeparatorColor" type="color" rgbHex="#070DF4" description="Separator Background"/>
+  <ThemeElement name="TileDialogTitleBkgColor" type="color" rgbHex="#5C60FA" description="Title Background"/>
+  <ThemeElement name="TileDialogTitleForeColor" type="color" rgbHex="#C6C8FC" description="Title Foreground"/>
+  <ThemeElement name="TileDialogStaticAreaBkgColor" type="color" rgbHex="#4FA5F9" description="Static area Background"/>
+  <ThemeElement name="BkgColor" type="color" rgbHex="#C1DFFB" description="Control area Background"/>
+  <ThemeElement name="DocumentBkgColor" type="color" rgbHex="#C1DFFB" description="Control area Background"/>
+  <ThemeElement name="HeaderTileDialogBkgColor" type="color" rgbHex="#C1DFFB" description="Header Background"/>
+  <ThemeElement name="FooterTileDialogBkgColor" type="color" rgbHex="#D8C3FC" description="Footer Background"/>
+  <ThemeElement name="TileGroupBkgColor" type="color" rgbHex="#FFFFFF" description="Tile Group Background"/>
+  <ThemeElement name="BERowSelectedBkgColor" type="color" rgbHex="#EEE980" description="Selected row Background"/>
+  <ThemeElement name="BERowSelectedForeColor" type="color" rgbHex="#000000" description="Selected row Foreground"/>

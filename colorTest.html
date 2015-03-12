@@ -1,0 +1,286 @@
+<html ng-app="app">
+<head>
+  <title>Color test with AngularJS</title>
+  <link href="styles.css" type="text/css" rel="stylesheet" />
+</head>
+<body ng-controller="ColorController">
+  <table cellspacing=0 border="0" ng-style="elements[3].style">
+    <tr>
+    <td><img src="New.PNG" />    </td>
+    <td><img src="Edit.PNG" />    </td>
+    <td><img src="Save.PNG" />    </td>
+    <td width = "10px">&nbsp;    </td>
+    <td><img src="First.PNG" />    </td>
+    <td><img src="Prev.PNG" />    </td>
+    <td><img src="Next.PNG" />    </td>
+    <td><img src="Last.PNG" />    </td>
+    <td width = "100%">&nbsp;    </td>
+    </tr>
+  </table>
+
+  <table cellspacing=2 border="0" ng-style="elements[6].style">
+    <tr>
+        <td colspan="3">
+            <table ng-style="elements[4].style" class="tileHeader" cellspacing=0>
+            <tr height="60px">
+                <td width = 10%>
+                  Lorem ipsum<br/>
+                  dolor sit amet<br/>
+                </td>
+                <td>
+                  <input ng-style="elements[4].style" type="text"  value="magna aliqua"/><br/>
+                  <input ng-style="elements[12].style" type="text"  value="Duis aute irure"/><br/>
+                </td>
+            </tr>
+            </table>
+        </td>
+    </tr>
+
+    <tr>
+    <td valign="top" class="selector" rowspan=4 width="50px" ng-style="iconSelector">
+        <table ng-style="elements[11].style"><tr><td class="selector"><img src="DataEntry.PNG" /></td></tr><tr><td class="selector" >Lorem</td></tr></table></br>
+        <img src="Accounting.PNG" /></br>Ipsum</br></br>
+        <img src="Inventory.PNG" /></br>Dolor</br></br>
+        <img src="Manufacturing.PNG" /></br>Sit amet</br></br>
+    </td>
+    <td>
+    <tr>
+      <td colspan="1">
+      <table class="tile" cellspacing=0>
+        <tr ng-style="elements[0].style" class="tileTitleSeparator"><td  colspan="2" ></td></tr>
+        <tr ng-style="elements[1].style" height="25px"><td  colspan="2">Lorem ipsum</td></tr>
+        <tr height="80px">
+          <td ng-style="elements[2].style" width="30%" valign="top" align="right">
+            Lorem ipsum<br/>
+            dolor sit amet<br/>
+            consectetur adipiscing<br/>
+            elit<br/>
+          </td>
+          <td ng-style="elements[3].style" valign="top">
+            <input ng-style="elements[focusedStyle].style" type="text" value="dolore magna aliqua" /><br/>
+            <input ng-style="elements[inputStyle].style" type="text" value="quis nostrud exercitation" /><br/>
+            <input ng-style="elements[inputStyle].style" type="checkbox"/><br/>
+            <input ng-style="elements[inputStyle].style" type="text" value="cupidatat non proident"/><br/>
+          </td>
+        </tr>
+      </table>
+      </td>
+      <td colspan="1">
+      <table class="tile" cellspacing=0>
+        <tr ng-style="elements[0].style" class="tileTitleSeparator"><td  colspan="2" ></td></tr>
+        <tr ng-style="elements[1].style" height="25px"><td  colspan="2">Dolor sit amet</td></tr>
+        <tr height="80px">
+          <td ng-style="elements[2].style" width="30%" valign="top" align="right">
+            Lorem ipsum<br/>
+            dolor sit amet<br/>
+            consectetur adipiscing<br/>
+            elit<br/>
+          </td>
+          <td ng-style="elements[3].style" valign="top">
+            <input ng-style="elements[inputStyle].style" type="text" /><br/>
+            <input ng-style="elements[inputStyle].style" type="text" /><br/>
+            <input ng-style="elements[inputStyle].style" type="checkbox"/><br/>
+            <input ng-style="elements[inputStyle].style" type="text" /><br/>
+          </td>
+        </tr>
+      </table>
+      </td>
+    </tr>
+
+    <tr>
+      <td colspan="2">
+      <table class="tile" style="width:1000px" cellspacing=0>
+        <tr ng-style="elements[0].style" class="tileTitleSeparator"><td></td></tr>
+        <tr ng-style="elements[1].style" height="25px"><td>Consectetur</td></tr>
+        <tr height="150px" valign="top">
+        <td width="100%">
+          <table ng-style="elements[inputStyle].style" class="tile" cellspacing=0 border=0 style="width:1000px;">
+            <tr ng-style="elements[3].style" style="border: 1px solid lightgray;">
+              <td ng-style="gridHeader" width="30%">Lorem</td><td width="30%" ng-style="gridHeader">ipsum</td><td width="10%" ng-style="gridHeader">dolor</td><td width="30%" ng-style="gridHeader" >sit</td><td ng-style="gridHeader">amet</td>
+            </tr>
+            <tr> <td ng-style="gridStyle">ABCD</td><td ng-style="gridStyle">Lorem ipsum</td><td ng-style="gridStyle" style="text-align:right">11234,56</td><td ng-style="gridStyle">&nbsp;</td><td ng-style="gridStyle">&nbsp;</td> </tr>
+            <tr> <td ng-style="elements[selectStyle].style">XYZT</td><td ng-style="elements[selectStyle].style">consectetur adipiscing</td><td ng-style="elements[selectStyle].style" style="text-align:right">432,10</td><td ng-style="elements[selectStyle].style">&nbsp;</td><td ng-style="elements[selectStyle].style">&nbsp;</td> </tr>
+            <tr> <td ng-style="gridStyle">&nbsp;</td><td ng-style="gridStyle">&nbsp;</td><td ng-style="gridStyle">&nbsp;</td><td ng-style="gridStyle">&nbsp;</td><td ng-style="gridStyle">&nbsp;</td> </tr>
+            <tr> <td ng-style="gridStyle">&nbsp;</td><td ng-style="gridStyle">&nbsp;</td><td ng-style="gridStyle">&nbsp;</td><td ng-style="gridStyle">&nbsp;</td><td ng-style="gridStyle">&nbsp;</td> </tr>
+            <tr> <td ng-style="gridStyle">&nbsp;</td><td ng-style="gridStyle">&nbsp;</td><td ng-style="gridStyle">&nbsp;</td><td ng-style="gridStyle">&nbsp;</td><td ng-style="gridStyle">&nbsp;</td> </tr>
+            <tr> <td ng-style="gridStyle">&nbsp;</td><td ng-style="gridStyle">&nbsp;</td><td ng-style="gridStyle">&nbsp;</td><td ng-style="gridStyle">&nbsp;</td><td ng-style="gridStyle">&nbsp;</td> </tr>
+            <tr> <td ng-style="gridStyle">&nbsp;</td><td ng-style="gridStyle">&nbsp;</td><td ng-style="gridStyle">&nbsp;</td><td ng-style="gridStyle">&nbsp;</td><td ng-style="gridStyle">&nbsp;</td> </tr>
+          </table>
+        </td>
+        </tr>
+      </table>
+      </td>
+    </tr>
+
+    <tr>
+        <td colspan="1">
+            <table ng-style="elements[5].style" class="tileFooter" cellspacing=0>
+            <tr ng-style="elements[0].style" class="tileTitleSeparator"><td  colspan="2" ></td></tr>
+            <tr ng-style="elements[5].style" height="25px"><td  colspan="2">Adipiscing</td></tr>
+            <tr height="60px">
+                <td width = 30% style="color:black; font-weight:normal; font-size:10pt">
+                  consectetur adipiscing<br/>
+                  elit<br/>
+                </td>
+                <td>
+                  <input ng-style="elements[5].style" type="text" /><br/>
+                  <input ng-style="elements[5].style" type="text" /><br/>
+                </td>
+            </tr>
+            </table>
+        </td>
+        <td colspan="1">
+            <table ng-style="elements[5].style" class="tileFooter" cellspacing=0>
+            <tr ng-style="elements[0].style" class="tileTitleSeparator"><td  colspan="2" ></td></tr>
+            <tr ng-style="elements[5].style" height="25px"><td  colspan="2">Sit</td></tr>
+            <tr height="60px">
+                <td width = 30% style="color:black; font-weight:normal; font-size:10pt">
+                  consectetur adipiscing<br/>
+                  elit<br/>
+                </td>
+                <td>
+                  <input ng-style="elements[5].style" type="text" /><br/>
+                  <input ng-style="elements[5].style" type="text" /><br/>
+                </td>
+            </tr>
+            </table>
+        </td>
+    </tr>
+      </td>
+    </tr>
+</table>
+
+<hr/>
+<input type="button" value="edit/browse" ng-click="toggleInputStyle(inputStyle)">
+<input type="button" value="select/multiselect" ng-click="selectStyle == 7 ? selectStyle = 8 : selectStyle = 7;  ">
+<input type="button" value="toggle separator" ng-click="elements[0].style['display'] == 'table-row' ? elements[0].style['display'] = 'none' : elements[0].style['display'] = 'table-row';  ">
+<table cellspacing=0>
+  <tr><td></td><td>Background</td><td>Foreground</td></tr>
+  <tr ng-repeat="element in elements">
+    <td>{{ element.name }}</td>
+    <td><input type="text" ng-model="element.style['background-color']"></td>
+    <td><input type="text" ng-model="element.style['color']"></td>
+    <td ng-style="element.style">&nbsp;&nbsp;sample&nbsp;&nbsp;</td>
+    <td>({{ element.tag }})</td>
+  </tr>
+</table>
+
+<p>Long to Hex conversion<br/>
+<input type="number" ng-model="decNum">
+<input type="button" value=">" ng-click="hexNum=decNum.toString(16).toUpperCase(); hexRev=hexNum.substr(4,2) + hexNum.substr(2,2) + hexNum.substr(0,2); testStyle='background-color:'+hexRev;">
+<span style={{testStyle}}>&nbsp;&nbsp; &#35;{{hexRev}}&nbsp;&nbsp;</span>
+</p>
+<!--
+<pre ng-repeat="element in elements">
+  &lt;ThemeElement name=&quot;{{ element.tag }}&quot; type=&quot;color&quot; rgbHex=&quot;&#35;{{element.style['background-color']}}&quot; description=&quot;{{element.name}}&quot;/&gt;
+</pre>
+-->
+<span style="font-family: Courier; font-size:10pt" ng-repeat="themeElement in themeElements">
+  &lt;ThemeElement name=&quot;{{ themeElement.name }}&quot; type=&quot;color&quot; rgbHex=&quot;&#35;{{elements[themeElement.index].style[themeElement.property]}}&quot; description=&quot;{{themeElement.description}}&quot;/&gt;</br>
+</span>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+  <script>
+    var app = angular.module("app", []);
+    app.controller('ColorController', ['$scope', function ($scope) {
+
+      elements = $scope.elements = [];
+
+      $scope.initThemeYellow = function() {
+        $scope.elements = [
+          { i: 0, name: 'Separator',        style: {"background-color":"5C05F4", color:"000000"},                         tag: 'TileTitleSeparatorColor',          },
+          { i: 1, name: 'Title',            style: {"background-color":"FFCF43", color:"221E00", "font-size":"12pt"},     tag: 'TileDialogTitleBkgColor/ForeColor',},
+          { i: 2, name: 'Static area',      style: {"background-color":"FFEFC0", color:"000000"},                         tag: 'TileDialogStaticAreaBkgColor',     },
+          { i: 3, name: 'Control area',     style: {"background-color":"FFF8C0", color:"000000"},                         tag: 'BkgColor/DocumentBkgColor',        },
+          { i: 4, name: 'Header',           style: {"background-color":"FFEFC0", color:"000000"},                         tag: 'HeaderTileDialogBkgColor',         },
+          { i: 5, name: 'Footer',           style: {"background-color":"FFCF43", color:"221E00", "font-size":"12pt"},     tag: 'FooterTileDialogBkgColor',         },
+          { i: 6, name: 'Tile Group',       style: {"background-color":"FFFFFF", color:"000000"},                         tag: 'TileGroupBkgColor',                },
+          { i: 7, name: 'Selected row',     style: {"background-color":"D8C3FC", color:"000000"},                         tag: 'BERowSelectedBkgColor/ForeColor',  },
+          { i: 8, name: 'Multiselection',   style: {"background-color":"5C05F4", color:"FFFFFF"},                         tag: 'BEMultiSelBkgColor/ForeColor',     },
+          { i: 9, name: 'Enabled Control',  style: {"background-color":"FFFFFF", color:"000000"},                         tag: 'EnabledControlBkgColor/ForeColor', },
+          { i:10, name: 'Focused Control',  style: {"background-color":"D8C3FC", color:"000000"},                         tag: 'FocusedControlBkgColor',           },
+          { i:11, name: 'Selected Selector',style: {"background-color":"FFCF43", color:"1C619E"},                         tag: 'TabSelectorSelectedBkgColor/TabSelectorHoveringForeColor',           },
+          { i:12, name: 'Hyperlink',        style: {"background-color":"FFEFC0", color:"2929F5"},                         tag: 'HyperLinkForeColor',           },
+          { i:13, name: 'Control border',   style: {"background-color":"ABABAB", color:"000000"},                         tag: 'StaticControlInBorderBkgColor',           },
+        ];
+      };
+
+      $scope.initThemeDefault = function() {
+        $scope.elements = [
+          { i: 0, name: 'Separator',        style: {"background-color":"1C619E", color:"000000"},                        tag: 'TileTitleSeparatorColor',          },
+          { i: 1, name: 'Title',            style: {"background-color":"9FC5F8", color:"1C619E", "font-size":"12pt"},    tag: 'TileDialogTitleBkgColor/ForeColor',},
+          { i: 2, name: 'Static area',      style: {"background-color":"DEEBF5", color:"000000"},                        tag: 'TileDialogStaticAreaBkgColor',     },
+          { i: 3, name: 'Control area',     style: {"background-color":"F2F2FA", color:"6D6D6D"},                        tag: 'BkgColor/DocumentBkgColor',        },
+          { i: 4, name: 'Header',           style: {"background-color":"DEEBF5", color:"000000"},                        tag: 'HeaderTileDialogBkgColor',         },
+          { i: 5, name: 'Footer',           style: {"background-color":"DEEBF5", color:"1C619E", "font-size":"12pt"},    tag: 'FooterTileDialogBkgColor',         },
+          { i: 6, name: 'Tile Group',       style: {"background-color":"FFFFFF", color:"000000"},                        tag: 'TileGroupBkgColor',                },
+          { i: 7, name: 'Selected row',     style: {"background-color":"EEE980", color:"000000"},                        tag: 'BERowSelectedBkgColor/ForeColor',  },
+          { i: 8, name: 'Multiselection',   style: {"background-color":"A00042", color:"FFFFFF"},                        tag: 'BEMultiSelBkgColor/ForeColor',     },
+          { i: 9, name: 'Enabled Control',  style: {"background-color":"FFFFFF", color:"000000"},                        tag: 'EnabledControlBkgColor/ForeColor', },
+          { i:10, name: 'Focused Control',  style: {"background-color":"FFFFBF", color:"000000"},                        tag: 'FocusedControlBkgColor',           },
+          { i:11, name: 'Selected Selector',style: {"background-color":"9FC5F8", color:"1C619E"},                        tag: 'TabSelectorSelectedBkgColor/TabSelectorHoveringForeColor',},
+          { i:12, name: 'Hyperlink',        style: {"background-color":"DEEBF5", color:"2929F5"},                        tag: 'HyperLinkForeColor',           },
+          { i:13, name: 'Control border',   style: {"background-color":"ABABAB", color:"000000"},                         tag: 'StaticControlInBorderBkgColor',           },
+        ];
+      };
+
+      $scope.initThemeDefault();
+      //$scope.initThemeYellow();
+
+      $scope.elements[ 0].style['display']          = "table-row";
+      $scope.elements[12].style['text-decoration']  = "underline";
+
+      $scope.themeElements = [
+        { name: 'TileTitleSeparatorColor',      description: 'Separator Background',        index : 0, property: "background-color" },
+        { name: 'TileDialogTitleBkgColor',      description: 'Title Background',            index : 1, property: "background-color" },
+        { name: 'TileDialogTitleForeColor',     description: 'Title Foreground',            index : 1, property: "color" },
+        { name: 'TileDialogStaticAreaBkgColor', description: 'Static area Background',      index : 2, property: "background-color" },
+        { name: 'BkgColor',                     description: 'Control area Background',     index : 3, property: "background-color" },
+        { name: 'DocumentBkgColor',             description: 'Control area Background',     index : 3, property: "background-color" },
+        { name: 'HeaderTileDialogBkgColor',     description: 'Header Background',           index : 4, property: "background-color" },
+        { name: 'FooterTileDialogBkgColor',     description: 'Footer Background',           index : 5, property: "background-color" },
+        { name: 'TileGroupBkgColor',            description: 'Tile Group Background',       index : 6, property: "background-color" },
+        { name: 'BERowSelectedBkgColor',        description: 'Selected row Background',     index : 7, property: "background-color" },
+        { name: 'BERowSelectedForeColor',       description: 'Selected row Foreground',     index : 7, property: "color" },
+        { name: 'BEMultiSelBkgColor',           description: 'Multiselection Background',   index : 8, property: "background-color" },
+        { name: 'BEMultiSelForeColor',          description: 'Multiselection Foreground',   index : 8, property: "color" },
+        { name: 'EnabledControlBkgColor',       description: 'Enabled Control Background',  index : 9, property: "background-color" },
+        { name: 'EnabledControlForeColor',      description: 'Enabled Control Foreground',  index : 9, property: "color" },
+        { name: 'DisabledControlForeColor',     description: 'Control Area Foreground',     index : 3, property: "color" },
+        { name: 'StaticControlForeColor',       description: 'Control Area Foreground',     index : 3, property: "color" },
+        { name: 'FocusedControlBkgColor',       description: 'Focused Control Background',  index :10, property: "background-color" },
+        { name: 'TabSelectorSelectedBkgColor',  description: 'Selected Selector Background',index :11, property: "background-color" },
+        { name: 'TabSelectorHoveringForeColor', description: 'Selected Selector Foreground',index :11, property: "color" },
+        { name: 'HyperLinkForeColor',           description: 'Hyperlink Foreground',        index :12, property: "color" },
+        { name: 'ToolbarBkgColor',              description: 'Control area Background',     index : 3, property: "background-color" },
+        { name: 'DockPaneBkgColor',             description: 'Control area Background',     index : 3, property: "background-color" },
+        { name: 'ButtonFaceForeColor',          description: 'Control area Foreground',     index : 3, property: "color" },
+        { name: 'WizardStepperBkgColor',        description: 'Title Background',            index : 1, property: "background-color" },
+        { name: 'WizardStepperForeColor',       description: 'Title Foreground',            index : 1, property: "color" },
+        { name: 'WizardTileTitleSeparatorColor',description: 'Separator Background',        index : 0, property: "background-color" },
+        { name: 'StaticControlInBorderBkgColor',description: 'Control border Background',   index :13, property: "background-color" },
+      ];
+      $scope.gridStyle={"border-bottom": "0px","border-top": "0px", "border-left": "1px solid lightgrey", "border-right": "1px solid lightgrey"};
+      $scope.gridHeader={"text-align" : "center", "border-bottom": "1px solid lightgrey","border-top": "0px", "border-left": "1px solid lightgrey", "border-right": "1px solid lightgrey"};
+      $scope.iconSelector={"valign":"top", "text-align":"center",};
+      $scope.inputStyle=3;
+      $scope.focusedStyle=3;
+      $scope.selectStyle=7;
+
+      $scope.toggleInputStyle = function(actual) {
+        //inputStyle == 3 ? {inputStyle = 9; focusedStyle=10} : {inputStyle = 3; focusedStyle=10}
+        if (actual == 3)
+        {
+          $scope.inputStyle = 9;
+          $scope.focusedStyle=10;
+        }
+        else
+        {
+          $scope.inputStyle = 3;
+          $scope.focusedStyle=3;
+        }
+      }
+    }]);
+  </script>
+</body>
+
+</html>
