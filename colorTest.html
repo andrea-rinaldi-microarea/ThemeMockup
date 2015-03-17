@@ -100,11 +100,11 @@
             </tr>
             <tr> <td ng-style="gridStyle">ABCD</td><td ng-style="gridStyle">Lorem ipsum</td><td ng-style="gridStyle" style="text-align:right">11234,56</td><td ng-style="gridStyle">&nbsp;</td><td ng-style="gridStyle">&nbsp;</td> </tr>
             <tr> <td ng-style="elements[selectStyle].style">XYZT</td><td ng-style="elements[selectStyle].style">consectetur adipiscing</td><td ng-style="elements[selectStyle].style" style="text-align:right">432,10</td><td ng-style="elements[selectStyle].style">&nbsp;</td><td ng-style="elements[selectStyle].style">&nbsp;</td> </tr>
-            <tr> <td ng-style="gridStyle">&nbsp;</td><td ng-style="gridStyle">&nbsp;</td><td ng-style="gridStyle">&nbsp;</td><td ng-style="gridStyle">&nbsp;</td><td ng-style="gridStyle">&nbsp;</td> </tr>
-            <tr> <td ng-style="gridStyle">&nbsp;</td><td ng-style="gridStyle">&nbsp;</td><td ng-style="gridStyle">&nbsp;</td><td ng-style="gridStyle">&nbsp;</td><td ng-style="gridStyle">&nbsp;</td> </tr>
-            <tr> <td ng-style="gridStyle">&nbsp;</td><td ng-style="gridStyle">&nbsp;</td><td ng-style="gridStyle">&nbsp;</td><td ng-style="gridStyle">&nbsp;</td><td ng-style="gridStyle">&nbsp;</td> </tr>
-            <tr> <td ng-style="gridStyle">&nbsp;</td><td ng-style="gridStyle">&nbsp;</td><td ng-style="gridStyle">&nbsp;</td><td ng-style="gridStyle">&nbsp;</td><td ng-style="gridStyle">&nbsp;</td> </tr>
-            <tr> <td ng-style="gridStyle">&nbsp;</td><td ng-style="gridStyle">&nbsp;</td><td ng-style="gridStyle">&nbsp;</td><td ng-style="gridStyle">&nbsp;</td><td ng-style="gridStyle">&nbsp;</td> </tr>
+            <tr> <td ng-style="gridStyle">ABCD</td><td ng-style="gridStyle">Lorem ipsum</td><td ng-style="gridStyle" style="text-align:right">11234,56</td><td ng-style="gridStyle">&nbsp;</td><td ng-style="gridStyle">&nbsp;</td> </tr>
+            <tr> <td ng-style="elements[alternateStyle].style">XYZT</td><td ng-style="elements[alternateStyle].style">consectetur adipiscing</td><td ng-style="elements[alternateStyle].style" style="text-align:right">432,10</td><td ng-style="elements[alternateStyle].style">&nbsp;</td><td ng-style="elements[alternateStyle].style">&nbsp;</td> </tr>
+            <tr> <td ng-style="gridStyle">ABCD</td><td ng-style="gridStyle">Lorem ipsum</td><td ng-style="gridStyle" style="text-align:right">11234,56</td><td ng-style="gridStyle">&nbsp;</td><td ng-style="gridStyle">&nbsp;</td> </tr>
+            <tr> <td ng-style="elements[alternateStyle].style">XYZT</td><td ng-style="elements[alternateStyle].style">consectetur adipiscing</td><td ng-style="elements[alternateStyle].style" style="text-align:right">432,10</td><td ng-style="elements[alternateStyle].style">&nbsp;</td><td ng-style="elements[alternateStyle].style">&nbsp;</td> </tr>
+            <tr> <td ng-style="gridStyle">&nbsp;</td><td ng-style="gridStyle">&nbsp;</td><td ng-style="gridStyle">&nbsp;</td><td ng-style="elements[15].style">Tooltip</td><td ng-style="gridStyle">&nbsp;</td> </tr>
           </table>
         </td>
         </tr>
@@ -153,7 +153,7 @@
 <hr/>
 <input type="button" value="edit/browse" ng-click="toggleInputStyle(inputStyle)">
 <input type="button" value="select/multiselect" ng-click="selectStyle == 7 ? selectStyle = 8 : selectStyle = 7;  ">
-<input type="button" value="toggle separator" ng-click="elements[0].style['display'] == 'table-row' ? elements[0].style['display'] = 'none' : elements[0].style['display'] = 'table-row';  ">
+<input type="button" value="toggle alternate row" ng-click="alternateStyle == 3 ? alternateStyle = 14 : alternateStyle = 3; ">
 <table cellspacing=0>
   <tr><td></td><td>Background</td><td>Foreground</td></tr>
   <tr ng-repeat="element in elements">
@@ -199,8 +199,10 @@
           { i: 9, name: 'Enabled Control',  style: {"background-color":"FFFFFF", color:"000000"},                         tag: 'EnabledControlBkgColor/ForeColor', },
           { i:10, name: 'Focused Control',  style: {"background-color":"D8C3FC", color:"000000"},                         tag: 'FocusedControlBkgColor',           },
           { i:11, name: 'Selected Selector',style: {"background-color":"FFCF43", color:"1C619E"},                         tag: 'TabSelectorSelectedBkgColor/TabSelectorHoveringForeColor',           },
-          { i:12, name: 'Hyperlink',        style: {"background-color":"FFEFC0", color:"2929F5"},                         tag: 'HyperLinkForeColor',           },
-          { i:13, name: 'Control border',   style: {"background-color":"ABABAB", color:"000000"},                         tag: 'StaticControlInBorderBkgColor',           },
+          { i:12, name: 'Hyperlink',        style: {"background-color":"FFEFC0", color:"2929F5"},                         tag: 'HyperLinkForeColor',               },
+          { i:13, name: 'Control border',   style: {"background-color":"ABABAB", color:"000000"},                         tag: 'StaticControlInBorderBkgColor',    },
+          { i:14, name: 'Alternate Row',    style: {"background-color":"EEF5FC", color:"000000"},                         tag: 'BERowBkgAlternateColor',           },
+          { i:15, name: 'Tooltip',          style: {"background-color":"EEF5FC", color:"000000"},                         tag: 'TooltipBkgColor/ForeColor',           },
         ];
       };
 
@@ -220,44 +222,67 @@
           { i:11, name: 'Selected Selector',style: {"background-color":"9FC5F8", color:"1C619E"},                        tag: 'TabSelectorSelectedBkgColor/TabSelectorHoveringForeColor',},
           { i:12, name: 'Hyperlink',        style: {"background-color":"DEEBF5", color:"2929F5"},                        tag: 'HyperLinkForeColor',           },
           { i:13, name: 'Control border',   style: {"background-color":"ABABAB", color:"000000"},                         tag: 'StaticControlInBorderBkgColor',           },
+          { i:14, name: 'Alternate Row',    style: {"background-color":"EEF5FC", color:"000000"},                         tag: 'BERowBkgAlternateColor',           },
+          { i:15, name: 'Tooltip',          style: {"background-color":"FFFFE1", color:"000000"},                         tag: 'TooltipBkgColor/ForeColor',           },
         ];
       };
 
-      $scope.initThemeDefault();
-      //$scope.initThemeYellow();
+      //$scope.initThemeDefault();
+      $scope.initThemeYellow();
 
       $scope.elements[ 0].style['display']          = "table-row";
       $scope.elements[12].style['text-decoration']  = "underline";
+      $scope.elements[ 3].style['border-left']      = "1px solid lightgrey";
+      $scope.elements[ 3].style['border-right']      = "1px solid lightgrey";
+      $scope.elements[ 9].style['border-left']      = "1px solid lightgrey";
+      $scope.elements[ 9].style['border-right']      = "1px solid lightgrey";
+      $scope.elements[14].style['border-left']      = "1px solid lightgrey";
+      $scope.elements[14].style['border-right']      = "1px solid lightgrey";
+      $scope.elements[15].style['border']      = "1px solid black";
 
       $scope.themeElements = [
-        { name: 'TileTitleSeparatorColor',      description: 'Separator Background',        index : 0, property: "background-color" },
-        { name: 'TileDialogTitleBkgColor',      description: 'Title Background',            index : 1, property: "background-color" },
-        { name: 'TileDialogTitleForeColor',     description: 'Title Foreground',            index : 1, property: "color" },
-        { name: 'TileDialogStaticAreaBkgColor', description: 'Static area Background',      index : 2, property: "background-color" },
-        { name: 'BkgColor',                     description: 'Control area Background',     index : 3, property: "background-color" },
-        { name: 'DocumentBkgColor',             description: 'Control area Background',     index : 3, property: "background-color" },
-        { name: 'HeaderTileDialogBkgColor',     description: 'Header Background',           index : 4, property: "background-color" },
-        { name: 'FooterTileDialogBkgColor',     description: 'Footer Background',           index : 5, property: "background-color" },
-        { name: 'TileGroupBkgColor',            description: 'Tile Group Background',       index : 6, property: "background-color" },
-        { name: 'BERowSelectedBkgColor',        description: 'Selected row Background',     index : 7, property: "background-color" },
-        { name: 'BERowSelectedForeColor',       description: 'Selected row Foreground',     index : 7, property: "color" },
-        { name: 'BEMultiSelBkgColor',           description: 'Multiselection Background',   index : 8, property: "background-color" },
-        { name: 'BEMultiSelForeColor',          description: 'Multiselection Foreground',   index : 8, property: "color" },
-        { name: 'EnabledControlBkgColor',       description: 'Enabled Control Background',  index : 9, property: "background-color" },
-        { name: 'EnabledControlForeColor',      description: 'Enabled Control Foreground',  index : 9, property: "color" },
-        { name: 'DisabledControlForeColor',     description: 'Control Area Foreground',     index : 3, property: "color" },
-        { name: 'StaticControlForeColor',       description: 'Control Area Foreground',     index : 3, property: "color" },
-        { name: 'FocusedControlBkgColor',       description: 'Focused Control Background',  index :10, property: "background-color" },
-        { name: 'TabSelectorSelectedBkgColor',  description: 'Selected Selector Background',index :11, property: "background-color" },
-        { name: 'TabSelectorHoveringForeColor', description: 'Selected Selector Foreground',index :11, property: "color" },
-        { name: 'HyperLinkForeColor',           description: 'Hyperlink Foreground',        index :12, property: "color" },
-        { name: 'ToolbarBkgColor',              description: 'Control area Background',     index : 3, property: "background-color" },
-        { name: 'DockPaneBkgColor',             description: 'Control area Background',     index : 3, property: "background-color" },
-        { name: 'ButtonFaceForeColor',          description: 'Control area Foreground',     index : 3, property: "color" },
-        { name: 'WizardStepperBkgColor',        description: 'Title Background',            index : 1, property: "background-color" },
-        { name: 'WizardStepperForeColor',       description: 'Title Foreground',            index : 1, property: "color" },
-        { name: 'WizardTileTitleSeparatorColor',description: 'Separator Background',        index : 0, property: "background-color" },
-        { name: 'StaticControlInBorderBkgColor',description: 'Control border Background',   index :13, property: "background-color" },
+        { name: 'TileTitleSeparatorColor',            description: 'Separator Background',        index : 0, property: "background-color" },
+        { name: 'TileDialogTitleBkgColor',            description: 'Title Background',            index : 1, property: "background-color" },
+        { name: 'TileDialogTitleForeColor',           description: 'Title Foreground',            index : 1, property: "color" },
+        { name: 'TileDialogStaticAreaBkgColor',       description: 'Static area Background',      index : 2, property: "background-color" },
+        { name: 'BkgColor',                           description: 'Control area Background',     index : 3, property: "background-color" },
+        { name: 'DocumentBkgColor',                   description: 'Control area Background',     index : 3, property: "background-color" },
+        { name: 'HeaderTileDialogBkgColor',           description: 'Header Background',           index : 4, property: "background-color" },
+        { name: 'FooterTileDialogBkgColor',           description: 'Footer Background',           index : 5, property: "background-color" },
+        { name: 'TileGroupBkgColor',                  description: 'Tile Group Background',       index : 6, property: "background-color" },
+        { name: 'BERowSelectedBkgColor',              description: 'Selected row Background',     index : 7, property: "background-color" },
+        { name: 'BERowSelectedForeColor',             description: 'Selected row Foreground',     index : 7, property: "color" },
+        { name: 'BEMultiSelBkgColor',                 description: 'Multiselection Background',   index : 8, property: "background-color" },
+        { name: 'BEMultiSelForeColor',                description: 'Multiselection Foreground',   index : 8, property: "color" },
+        { name: 'EnabledControlBkgColor',             description: 'Enabled Control Background',  index : 9, property: "background-color" },
+        { name: 'EnabledControlForeColor',            description: 'Enabled Control Foreground',  index : 9, property: "color" },
+        { name: 'DisabledControlForeColor',           description: 'Control Area Foreground',     index : 3, property: "color" },
+        { name: 'StaticControlForeColor',             description: 'Control Area Foreground',     index : 3, property: "color" },
+        { name: 'FocusedControlBkgColor',             description: 'Focused Control Background',  index :10, property: "background-color" },
+        { name: 'TabSelectorSelectedBkgColor',        description: 'Selected Selector Background',index :11, property: "background-color" },
+        { name: 'TabSelectorHoveringForeColor',       description: 'Selected Selector Foreground',index :11, property: "color" },
+        { name: 'HyperLinkForeColor',                 description: 'Hyperlink Foreground',        index :12, property: "color" },
+        { name: 'ToolbarBkgColor',                    description: 'Control area Background',     index : 3, property: "background-color" },
+        { name: 'DockPaneBkgColor',                   description: 'Control area Background',     index : 3, property: "background-color" },
+        { name: 'ButtonFaceForeColor',                description: 'Control area Foreground',     index : 3, property: "color" },
+        { name: 'WizardStepperBkgColor',              description: 'Title Background',            index : 1, property: "background-color" },
+        { name: 'WizardStepperForeColor',             description: 'Title Foreground',            index : 1, property: "color" },
+        { name: 'WizardTileTitleSeparatorColor',      description: 'Separator Background',        index : 0, property: "background-color" },
+        { name: 'StaticControlInBorderBkgColor',      description: 'Control border Background',   index :13, property: "background-color" },
+        { name: 'BERowBkgAlternateColor',             description: 'Alternate Row Background',    index :14, property: "background-color" },
+        { name: 'BELockedSeparatorColor',             description: 'Control border Background',   index :13, property: "background-color" },
+        { name: 'BEResizeColVerticalLineColor',       description: 'Control border Background',   index :13, property: "background-color" },
+        { name: 'BESeparatorColor',                   description: 'Control border Background',   index :13, property: "background-color" },
+        { name: 'BEToolbarBtnShadowColor',            description: 'Control area Background',     index : 3, property: "background-color" },
+        { name: 'BEToolbarBtnHighlightColor',         description: 'Control area Background',     index : 3, property: "background-color" },
+        { name: 'AlternateColor',                     description: 'Alternate Row Background',    index :14, property: "background-color" },
+        { name: 'TooltipBkgColor',                    description: 'Tooltip Background',          index :15, property: "background-color" },
+        { name: 'TooltipForeColor',                   description: 'Tooltip Foreground',          index :15, property: "color" },
+        { name: 'RadarVerticalLineColor',             description: 'Control border Background',   index :13, property: "background-color" },
+        { name: 'RadarTitleBarLineColor',             description: 'Control border Background',   index :13, property: "background-color" },
+        { name: 'RadarTitleBarSelectedButtonBkgColor',description: 'Selected row Background',     index : 7, property: "background-color" },
+        { name: 'RadarSeparatorColor',                description: 'Control border Background',   index :13, property: "background-color" },
+        { name: 'RadarPageBkgColor',                  description: 'Control area Background',     index : 3, property: "background-color" },
       ];
       $scope.gridStyle={"border-bottom": "0px","border-top": "0px", "border-left": "1px solid lightgrey", "border-right": "1px solid lightgrey"};
       $scope.gridHeader={"text-align" : "center", "border-bottom": "1px solid lightgrey","border-top": "0px", "border-left": "1px solid lightgrey", "border-right": "1px solid lightgrey"};
@@ -265,18 +290,23 @@
       $scope.inputStyle=3;
       $scope.focusedStyle=3;
       $scope.selectStyle=7;
+      $scope.alternateStyle=3;
 
       $scope.toggleInputStyle = function(actual) {
         //inputStyle == 3 ? {inputStyle = 9; focusedStyle=10} : {inputStyle = 3; focusedStyle=10}
         if (actual == 3)
         {
           $scope.inputStyle = 9;
-          $scope.focusedStyle=10;
+          $scope.focusedStyle = 10;
+          if ($scope.alternateStyle == 3)
+            $scope.alternateStyle = 9;
         }
         else
         {
           $scope.inputStyle = 3;
           $scope.focusedStyle=3;
+          if ($scope.alternateStyle == 9)
+            $scope.alternateStyle = 3;
         }
       }
     }]);
