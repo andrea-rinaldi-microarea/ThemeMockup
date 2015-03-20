@@ -183,6 +183,8 @@
     var app = angular.module("app", []);
     app.controller('ColorController', ['$scope', function ($scope) {
 
+      console.log("partito il controller");
+
       elements = $scope.elements = [];
 
       $scope.initThemeYellow = function() {
@@ -294,6 +296,7 @@
 
       $scope.toggleInputStyle = function(actual) {
         //inputStyle == 3 ? {inputStyle = 9; focusedStyle=10} : {inputStyle = 3; focusedStyle=10}
+        console.log("actual " + actual);
         if (actual == 3)
         {
           $scope.inputStyle = 9;
